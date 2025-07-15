@@ -22,8 +22,21 @@ Add it in your root settings.gradle at the end of repositories
  Add the dependency
 ```
 	dependencies {
-	        implementation("com.github.LiuXing0327:ColorPickerView:1.0")
+	        implementation("com.github.LiuXing0327:ColorPickerView:V1.0")
 	}
+```
+
+## Usage
+```
+    <com.liuxing.library.ColorPickerView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+```
+```
+        val colorPickerView =
+            findViewById<ColorPickerView>(R.id.color_picker_view)
+        colorPickerView.onColorChanged =
+            { color -> main.setBackgroundColor(color) }
 ```
 
 ## License
