@@ -7,6 +7,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.liuxing.colorpickerview.R
+import com.liuxing.library.ColorPickerView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         val colorPickerView =
-            findViewById<com.liuxing.library.ColorPickerView>(R.id.color_picker_view)
+            findViewById<ColorPickerView>(R.id.color_picker_view)
         val main = findViewById<ConstraintLayout>(R.id.main)
 
         colorPickerView.onColorChanged =
