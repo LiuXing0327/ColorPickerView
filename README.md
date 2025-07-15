@@ -8,6 +8,37 @@
 <img src="Screenshot/Screenshot_20250715_101756.png" width="100%"/>
 </div>
 
+## Dependency
+Add it in your root settings.gradle at the end of repositories
+```
+	dependencyResolutionManagement {
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories {
+			mavenCentral()
+			maven { url = uri("https://jitpack.io") }
+		}
+	}
+```
+ Add the dependency
+```
+	dependencies {
+	        implementation("com.github.LiuXing0327:ColorPickerView:V1.0")
+	}
+```
+
+## Usage
+```
+    <com.liuxing.library.ColorPickerView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+```
+```
+        val colorPickerView =
+            findViewById<ColorPickerView>(R.id.color_picker_view)
+        colorPickerView.onColorChanged =
+            { color -> main.setBackgroundColor(color) }
+```
+
 ## License
 ```
  Copyright [2025] [LiuXing]
